@@ -1,0 +1,12 @@
+---
+import { Image, getImage } from 'astro:assets';
+
+export interface Props {
+	name: string;
+	job: string;
+	desc: string;
+    image: string;
+}
+
+const { name, job, desc, image} = Astro.props;
+---

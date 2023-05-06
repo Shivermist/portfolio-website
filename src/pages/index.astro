@@ -1,51 +1,92 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import NavBar from '../components/NavBar.astro';
+
 ---
 
 <Layout title="Welcome to Astro.">
+	<NavBar />
+	<Header
+		name="Claire Kim"
+		job="Computer Engineer"
+		desc="Hi! I'm Claire Kim, an aspiring computer engineer. I'm currently studying at McMaster University."
+		image=public/computer_storyset.jpg
+	/>
+	
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
+			Hi! I'm Claire Kim, an aspiring computer engineer. I'm currently studying at McMaster University. <br />
+
+			
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
+		<h1 style="padding-top: 50px;"> Integrated Cornerstone Design Projects </h1>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				title="Renewable Energy Challenge"
+				body="..."
+				imageSrc="public/windmill.jpg"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://docs.astro.build/"
+				title="Get A Grip"
+				body="..."
+				imageSrc="public/QLabs-Robotics-Sorting.png"
 			/>
 		</ul>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Revenge of the Recycling System"
+				body="..."
+				imageSrc="public/QArm-Virtual-Sorting.jpg"
+			/>
+			<Card
+				href="https://docs.astro.build/"
+				title="Electromagnetic Gripper"
+				body="..."
+				imageSrc="public/electromagnetic_gripper.jpg"
+			/>
+		</ul>
+		<h1 style="padding-top: 50px; padding-bottom: 15px;"> LIDAR Scanner for Spacial Mapping </h1>
+		<Card
+			href="https://docs.astro.build/"
+			title="Renewable Energy Challenge"
+			body="..."
+			imageSrc="public/LIDAR-Scanner.jpg"
+		/>
+
+
 	</main>
 </Layout>
 
 <style>
+		
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 120ch;
+		
 	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
+		text-align: left;
 	}
+
+	h2 {
+		font-size: 2rem;
+		font-weight: 500;
+		margin: 0;
+		text-align: left;
+
+	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;

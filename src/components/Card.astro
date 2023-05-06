@@ -1,63 +1,74 @@
 ---
+import { Image, getImage } from 'astro:assets';
+
 export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	imageSrc: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, imageSrc } = Astro.props;
 ---
 
-<li class="link-card">
+<li class="link-card" style={{ backgroundImage: `url(${imageSrc})` }}>
 	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
+	  <h2>
+		{title}
+		<span>&rarr;</span>
+	  </h2>
+	  <p>{body}</p>
 	</a>
-</li>
-<style>
+  </li>
+  
+  <style>
 	.link-card {
+		position:relative;
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
 		background-color: white;
 		background-image: none;
-		background-size: 400%;
+		background-size: 100%;
 		border-radius: 0.6rem;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 	}
-
+  
 	.link-card > a {
+		position: relative;
 		width: 100%;
 		text-decoration: none;
-		line-height: 1.4;
+		line-height: 5;
 		padding: 1rem 1.3rem;
 		border-radius: 0.35rem;
-		color: #111;
+		color: #000000;
 		background-color: white;
-		opacity: 0.8;
+		opacity: 0.7;
 	}
+  
+	.link-card:hover,
+	.link-card:focus-within {
+		transform: translateY(-10px);
+	}
+
+	.link-card:hover .image-container,
+	.link-card:focus-within .image-container {
+		transform: scale(1.2);
+	}
+
 	h2 {
-		margin: 0;
+		margin: 0.5rem;
 		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
+
 	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+		margin: 0.5rem;
 		color: #444;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
+
+	.link-card span {
+		margin-left: 5px;
 	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
-	}
-</style>
+  </style>
