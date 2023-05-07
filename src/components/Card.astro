@@ -15,9 +15,7 @@ const { href, title, body, imageSrc } = Astro.props;
 	<a href={href}>
 	  <h2>
 		{title}
-		<span>&rarr;</span>
 	  </h2>
-	  <p>{body}</p>
 	</a>
   </li>
   
@@ -26,7 +24,7 @@ const { href, title, body, imageSrc } = Astro.props;
 		position:relative;
 		list-style: none;
 		display: flex;
-		padding: 0.25rem;
+		padding: 0.55rem;
 		background-color: white;
 		background-image: none;
 		background-size: 100%;
@@ -41,11 +39,10 @@ const { href, title, body, imageSrc } = Astro.props;
 		width: 100%;
 		text-decoration: none;
 		line-height: 5;
-		padding: 1rem 1.3rem;
 		border-radius: 0.35rem;
 		color: #000000;
-		background-color: white;
-		opacity: 0.7;
+		background-color: rgba(255, 255, 255, 0.400);
+		opacity: 1;
 	}
   
 	.link-card:hover,
@@ -58,9 +55,10 @@ const { href, title, body, imageSrc } = Astro.props;
 		transform: scale(1.2);
 	}
 
-	h2 {
+	.link-card > a > h2 {
 		margin: 0.5rem;
-		font-size: 1.25rem;
+		font-size: 1.50rem;
+		text-align: center;
 	}
 
 	p {

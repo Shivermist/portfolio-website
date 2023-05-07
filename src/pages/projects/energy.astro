@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+---
+<div class="container">
+  <h1>Welcome to my website</h1>
+  <p>This is some sample text.</p>
+</div>
+<footer class="round-footer">
+  <p>&copy; 2023 My Company</p>
+</footer>
+
+<style>
+html, body {
+  height: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.round-footer {
+  background-color: #003366;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 50px;
+  border-top-left-radius: 50% 10%;
+  border-top-right-radius: 50% 10%;
+}
+</style>

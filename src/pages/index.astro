@@ -3,26 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
 
 ---
 
-<Layout title="Welcome to Astro.">
-	<NavBar />
+<Layout title="Claire Kim's Website">
+	<NavBar/>
 	<Header
 		name="Claire Kim"
 		job="Computer Engineer"
-		desc="Hi! I'm Claire Kim, an aspiring computer engineer. I'm currently studying at McMaster University."
+		desc="I'm currently studying computer engineering at McMaster University. I have experience in hardware, programming, and the arts such as graphic design. Check out my works below!"
 		image="computer_storyset.jpg"
 	/>
-	
-	<main>
-		<p class="instructions">
-			Hi! I'm Claire Kim, an aspiring computer engineer. I'm currently studying at McMaster University. <br />
 
-			
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+	<h2 style="padding-left: 15rem; color: red"> RESUME BUTTON HERE </h2>
+
+	<main>
 		<h1 style="padding-top: 50px;"> Integrated Cornerstone Design Projects </h1>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -55,16 +51,21 @@ import NavBar from '../components/NavBar.astro';
 		<h1 style="padding-top: 50px; padding-bottom: 15px;"> LIDAR Scanner for Spacial Mapping </h1>
 		<Card
 			href="https://docs.astro.build/"
-			title="Renewable Energy Challenge"
+			title="Microprocessor Systems Design Project"
 			body="..."
 			imageSrc="LIDAR-Scanner.jpg"
 		/>
 
-
 	</main>
+
+	<Footer/>
+
 </Layout>
 
 <style>
+	body {
+		background-color: white;
+	}
 		
 	main {
 		margin: auto;
@@ -73,10 +74,12 @@ import NavBar from '../components/NavBar.astro';
 		
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		font-weight: 800;
 		margin: 0;
 		text-align: left;
+		color:rgb(156, 83, 212);
+
 	}
 
 	h2 {
@@ -84,6 +87,7 @@ import NavBar from '../components/NavBar.astro';
 		font-weight: 500;
 		margin: 0;
 		text-align: left;
+
 
 	}
 

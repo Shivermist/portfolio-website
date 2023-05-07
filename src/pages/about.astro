@@ -1,36 +1,87 @@
 ---
+import { Image, getImage } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
 ---
 
-  
-<Layout title="ABOUT PAGE.">
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-
-
-		<h1>About Me</h1>
-		<h2>... and my new Astro site!</h2>
-	
-		<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+<Layout title="About">
+	<NavBar/>	
+	<main>
+		<div class="grid">
+			<div class="column">
+				<img src="/ClaireKim_cardphoto.jpg" alt="headshot" />
+			</div>
+			<div class="column">
+				<h1 class="text-gradient">About Me</h1>
+				<p class="instructions">
+					
+					Hello, I'm Claire (Gyu-Ri) Kim. Welcome to my website! <br />
+					<br />
 		
-		<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-	</body>
+					I'm currently studying computer engineering at McMaster University where I studied various topics in data structure and algorithms,
+					circuit design, and computer architecture. <br /> <br />
+
+					Currently, I am interested in embedded systems, robotics, and machine learning. As well as arts and design. <br />
+					<br />
+					
+					To get started, open the directory <code>src/pages</code> in your project.<br />
+					<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+				</p>
+			</div>
+		</div>	
+	</main>
+
+	<Footer/>
+
 </Layout>
 
 <style>
 	body {
+		background-color: white;
+	}
+		
+	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 120ch;		
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		font-weight: 800;
 		margin: 0;
+		color:rgb(0, 0, 0);
+		text-align: center;
 	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 0.4rem;
+		margin: 0;
+		padding-top: 3rem;
+	}
+
+	.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  	}
+
+	.column {
+		text-align: left;
+		margin-left: 5rem;
+	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -41,7 +92,7 @@ import Card from '../components/Card.astro';
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
+		border: 3px solid rgba(var(--accent), 25%);
 		background-color: white;
 		padding: 1rem;
 		border-radius: 0.4rem;
@@ -53,14 +104,10 @@ import Card from '../components/Card.astro';
 		color: rgb(var(--accent));
 		border-radius: 4px;
 		padding: 0.3em 0.45em;
+		
 	}
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	
 </style>
