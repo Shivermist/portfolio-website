@@ -1,126 +1,121 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
-import NavBar from '../components/NavBar.astro';
-import Footer from '../components/Footer.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Claire Kim's Website">
-	<NavBar/>
-	<Header
-		name="Claire Kim"
-		job="Computer Engineer"
-		desc="I'm currently studying computer engineering at McMaster University. I have experience in hardware, programming, and the arts such as graphic design. Check out my works below!"
-		image="computer_storyset.jpg"
-	/>
+  <NavBar />
+  <Header
+    name="Claire Kim"
+    job="Computer Engineer"
+    desc="I'm currently studying computer engineering at McMaster University. I have experience in hardware, programming, and the arts such as graphic design. Check out my works below!"
+    image="computer_storyset.jpg"
+  />
 
-	<h2 style="padding-left: 5em; color: red"> RESUME BUTTON HERE </h2>
+  <h2 style="padding-left: 5em; color: red">RESUME BUTTON HERE</h2>
 
-	<main>
-		<h1 style="padding-top: 1em;"> Integrated Cornerstone Design Projects </h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Renewable Energy Challenge"
-				body="..."
-				imageSrc="windmill.jpg"
-			/>
-			<Card
-				href="https://docs.astro.build/"
-				title="Get A Grip"
-				body="..."
-				imageSrc="QLabs-Robotics-Sorting.png"
-			/>
-		</ul>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Revenge of the Recycling System"
-				body="..."
-				imageSrc="QArm-Virtual-Sorting.jpg"
-			/>
-			<Card
-				href="https://docs.astro.build/"
-				title="Electromagnetic Gripper"
-				body="..."
-				imageSrc="electromagnetic_gripper.jpg"
-			/>
-		</ul>
-		<h1 style="padding-top: 1em; padding-bottom: 0.5em;"> LIDAR Scanner for Spacial Mapping </h1>
-		<Card
-			href="https://docs.astro.build/"
-			title="Microprocessor Systems Design Project"
-			body="..."
-			imageSrc="LIDAR-Scanner.jpg"
-		/>
+  <main>
+    <h1 style="padding-top: 1em;">Integrated Cornerstone Design Projects</h1>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://docs.astro.build/"
+        title="Renewable Energy Challenge"
+        body="..."
+        imageSrc="windmill.jpg"
+      />
+      <Card
+        href="https://docs.astro.build/"
+        title="Get A Grip"
+        body="..."
+        imageSrc="QLabs-Robotics-Sorting.png"
+      />
+    </ul>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://docs.astro.build/"
+        title="Revenge of the Recycling System"
+        body="..."
+        imageSrc="QArm-Virtual-Sorting.jpg"
+      />
+      <Card
+        href="https://docs.astro.build/"
+        title="Electromagnetic Gripper"
+        body="..."
+        imageSrc="electromagnetic_gripper.jpg"
+      />
+    </ul>
+    <h1 style="padding-top: 1em; padding-bottom: 0.5em;">
+      LIDAR Scanner for Spacial Mapping
+    </h1>
+    <Card
+      href="https://docs.astro.build/"
+      title="Microprocessor Systems Design Project"
+      body="..."
+      imageSrc="LIDAR-Scanner.jpg"
+    />
+  </main>
 
-	</main>
-
-	<Footer/>
-
+  <Footer />
 </Layout>
 
 <style>
-	body {
-		background-color: white;
-	}
-		
-	main {
-		margin: auto;
-		padding: 1.5em;
-		max-width: 120ch;
-		
-	}
-	h1 {
-		font-size: 2.5em;
-		font-weight: 800;
-		margin: 0;
-		text-align: left;
-		color:rgb(156, 83, 212);
+  body {
+    background-color: white;
+  }
 
-	}
+  main {
+    margin: auto;
+    padding: 1.5em;
+    max-width: 120ch;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0;
+    text-align: left;
+    color: rgb(156, 83, 212);
+  }
 
-	h2 {
-		font-size: 2em;
-		font-weight: 500;
-		margin: 0;
-		text-align: left;
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
 
-
-	}
-
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1em 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1em;
-		border-radius: 0.4em;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1em;
-		padding: 0;
-	}
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1em 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.4em;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1em;
+    padding: 0;
+  }
 </style>

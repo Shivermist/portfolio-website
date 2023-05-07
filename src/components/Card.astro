@@ -1,69 +1,69 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { Image, getImage } from "astro:assets";
 
 export interface Props {
-	title: string;
-	body: string;
-	href: string;
-	imageSrc: string;
+  title: string;
+  body: string;
+  href: string;
+  imageSrc: string;
 }
 
 const { href, title, body, imageSrc } = Astro.props;
 ---
 
 <li class="link-card" style={{ backgroundImage: `url(${imageSrc})` }}>
-	<a href={href}>
-	  <h2>
-		{title}
-	  </h2>
-	</a>
-  </li>
-  
-  <style>
-	.link-card {
-		position:relative;
-		list-style: none;
-		display: flex;
-		padding: 0.55em;
-		background-color: white;
-		background-image: none;
-		background-size: 100%;
-		border-radius: 0.6em;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
-  
-	.link-card > a {
-		position: relative;
-		width: 100%;
-		text-decoration: none;
-		line-height: 5;
-		border-radius: 0.35em;
-		color: #000000;
-		background-color: rgba(255, 255, 255, 0.400);
-		opacity: 1;
-	}
-  
-	.link-card:hover,
-	.link-card:focus-within {
-		transform: translateY(-0.5em);
-	}
+  <a href={href}>
+    <h2>
+      {title}
+    </h2>
+  </a>
+</li>
 
-	.link-card:hover .image-container,
-	.link-card:focus-within .image-container {
-		transform: scale(1.2);
-	}
+<style>
+  .link-card {
+    position: relative;
+    list-style: none;
+    display: flex;
+    padding: 0.55em;
+    background-color: white;
+    background-image: none;
+    background-size: 100%;
+    border-radius: 0.6em;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
 
-	.link-card > a > h2 {
-		margin: 0.5em;
-		font-size: 1.50em;
-		text-align: center;
-	}
+  .link-card > a {
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    line-height: 5;
+    border-radius: 0.35em;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
 
-	p {
-		margin: 0.5em;
-		color: #444;
-	}
-	
-  </style>
+  .link-card:hover,
+  .link-card:focus-within {
+    transform: translateY(-0.5em);
+  }
+
+  .link-card:hover .image-container,
+  .link-card:focus-within .image-container {
+    transform: scale(1.2);
+  }
+
+  .link-card > a > h2 {
+    margin: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  p {
+    margin: 0.5em;
+    color: #444;
+  }
+</style>

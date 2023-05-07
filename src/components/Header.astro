@@ -1,76 +1,75 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { Image, getImage } from "astro:assets";
 
 export interface Props {
-	name: string;
-	job: string;
-	desc: string;
-    image: string;
+  name: string;
+  job: string;
+  desc: string;
+  image: string;
 }
 
-const { name, job, desc, image} = Astro.props;
+const { name, job, desc, image } = Astro.props;
 ---
+
 <div class="grid">
-    <div class="column">
-        <!-- Content for first column -->
-        <h1> Hi I'm  <span class="text-gradient"> {name} </span> </h1>
-        <h2> {job} </h2>
-        <p> {desc} </p>
-    </div>
-    <div class="column">
-        <!-- Content for second column -->
-        <img src={image} alt="header" />
-    </div>
+  <div class="column">
+    <!-- Content for first column -->
+    <h1>Hi I'm <span class="text-gradient"> {name}</span></h1>
+    <h2>{job}</h2>
+    <p>{desc}</p>
+  </div>
+  <div class="column">
+    <!-- Content for second column -->
+    <img src={image} alt="header" />
+  </div>
 </div>
 
 <style>
-    .grid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  	}
+  }
 
-	.column {
-		/* how to do top padding */
-		text-align-last: center;
-		margin-left: 5em;
-		text-align:center;
+  .column {
+    /* how to do top padding */
+    text-align-last: center;
+    margin-left: 5em;
+    text-align: center;
+  }
 
-	}
+  h1 {
+    font-size: 5em;
+    font-weight: 800;
+    margin: 0;
+    text-align: left;
+    padding-top: 2em;
+  }
 
-	h1 {
-		font-size: 5em;
-		font-weight: 800;
-		margin: 0;
-		text-align: left;
-        padding-top: 2em;
-	}
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
 
-	h2 {
-		font-size: 2em;
-		font-weight: 500;
-		margin: 0;
-		text-align: left;
-	}
+  p {
+    padding-top: 1em;
+    font-size: 1.3em;
+    font-weight: 350;
+    margin: 0;
+  }
 
-	p {
-		padding-top: 1em;
-		font-size: 1.3em;
-		font-weight: 350;
-		margin: 0;
-	}
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	
-	img {
-        width: 60%;
-        height: auto;
-        padding-top: 5em;
-	}
-
+  img {
+    width: 60%;
+    height: auto;
+    padding-top: 5em;
+  }
 </style>
