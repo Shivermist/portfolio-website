@@ -11,13 +11,13 @@ export interface Props {
 const { href, title, body, imageSrc } = Astro.props;
 ---
 
-<li class="link-card" style={{ backgroundImage: `url(${imageSrc})` }}>
+<div class="link-card" style={{ backgroundImage: `url(${imageSrc})` }}>
   <a href={href}>
     <h2>
       {title}
     </h2>
   </a>
-</li>
+</div>
 
 <style>
   .link-card {

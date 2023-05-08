@@ -1,0 +1,57 @@
+
+  body {
+    background-color: white;
+  }
+
+  main {
+    margin: auto;
+    padding: 1.5em;
+    max-width: 120ch;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0;
+    text-align: left;
+    color: rgb(156, 83, 212);
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1em 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.4em;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1em;
+    padding: 0;
+  }

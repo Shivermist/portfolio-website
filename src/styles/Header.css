@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column {
+  /* how to do top padding */
+  text-align-last: center;
+  margin-left: 5em;
+  text-align: center;
+  font-size: 1vw;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 800;
+  margin: 0;
+  padding-top: 2em;
+  /* font-size: 5vw; */
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0;
+  /* font-size: 2.1vw; */
+
+}
+
+p {
+  padding-top: 1em;
+  font-size: 1.3em;
+  font-weight: 350;
+  margin: 0;
+  /* font-size: 1.4vw; */
+
+}
+
+.text-gradient {
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
+
+img {
+  width: 60%;
+  height: auto;
+  padding-top: 5em;
+  
+}
+
+.button {
+    border-radius: 20px / 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #7738ce, #d862da);
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+    size: 3vw;
+  }
+  .button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+    .column {
+      grid-row: auto;
+      font-size:2vw
+    }
+    .button {
+      font-size: 2vw;
+    }
+  }

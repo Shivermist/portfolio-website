@@ -4,9 +4,13 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+
+// import "../styles/index.css";
 ---
 
 <Layout title="Claire Kim's Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <NavBar />
   <Header
     name="Claire Kim"
@@ -15,7 +19,6 @@ import Footer from "../components/Footer.astro";
     image="computer_storyset.jpg"
   />
 
-  <h2 style="padding-left: 5em; color: red">RESUME BUTTON HERE</h2>
 
   <main>
     <h1 style="padding-top: 1em;">Integrated Cornerstone Design Projects</h1>
@@ -62,6 +65,7 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <style>
+  
   body {
     background-color: white;
   }
@@ -76,7 +80,7 @@ import Footer from "../components/Footer.astro";
     font-weight: 800;
     margin: 0;
     text-align: left;
-    color: rgb(156, 83, 212);
+    color: rgb(70, 70, 70);
   }
 
   h2 {
@@ -118,4 +122,5 @@ import Footer from "../components/Footer.astro";
     gap: 1em;
     padding: 0;
   }
+
 </style>
