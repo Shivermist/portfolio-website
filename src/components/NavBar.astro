@@ -2,14 +2,21 @@
 import { Image, getImage } from "astro:assets";
 import "../styles/NavBar.css"
 ---
-
 <div class="header-bar">
   <div class="left">
     <a href="/">Home</a>
   </div>
   <div class="right">
     <a href="/about/">About</a>
-    <a href="https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a">Projects</a>
+    <a href="/projects/" id="projects-link">Projects</a>
     <a href="/404/">Contact</a>
   </div>
 </div>
+
+<script>
+  var projectsLink = document.getElementById("projects-link");
+  projectsLink.addEventListener("click", function(event) {
+    event.preventDefault(); // prevent the default link behavior
+    window.location.href = "https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a"; // redirect to the desired URL
+  });
+</script>
