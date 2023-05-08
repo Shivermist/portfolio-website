@@ -24,7 +24,6 @@ h2 {
   font-weight: 500;
   margin: 0;
   /* font-size: 2.1vw; */
-
 }
 
 p {
@@ -33,7 +32,6 @@ p {
   font-weight: 350;
   margin: 0;
   /* font-size: 1.4vw; */
-
 }
 
 .text-gradient {
@@ -48,35 +46,33 @@ img {
   width: 60%;
   height: auto;
   padding-top: 5em;
-  
 }
 
 .button {
-    border-radius: 20px / 20px;
-    padding: 10px 40px;
-    background: linear-gradient(to right, #7738ce, #d862da);
-    color: #fff;
-    border: none;
-    font-size: 1.6em;
-    transition: all 0.2s ease-in-out;
-    size: 3vw;
-  }
-  .button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
+  border-radius: 20px / 20px;
+  padding: 10px 40px;
+  background: linear-gradient(to right, #7738ce, #d862da);
+  color: #fff;
+  border: none;
+  font-size: 1.6em;
+  transition: all 0.2s ease-in-out;
+  size: 3vw;
+}
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
-
-  @media screen and (max-width: 700px) {
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-    }
-    .column {
-      grid-row: auto;
-      font-size:2vw
-    }
-    .button {
-      font-size: 3.5vw;
-    }
+@media screen and (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
+  .column {
+    grid-row: auto;
+    font-size: 2vw;
+  }
+  .button {
+    font-size: 3.5vw;
+  }
+}
