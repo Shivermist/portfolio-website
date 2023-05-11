@@ -9,9 +9,6 @@ export interface Props {
 const { name, job, desc, image } = Astro.props;
 
 import "../styles/Header.css";
-import email from "../Logos/email.svg";
-import linkedin from "../Logos/linkedin.svg";
-import github from "../Logos/github.svg";
 
 ---
 
@@ -25,12 +22,12 @@ import github from "../Logos/github.svg";
     <a href="resume.pdf" target="_blank">
       <button class="button">Resume</button>
     </a>
-    <div class="container">
+    <!-- <div class="container">
       <img src={email} alt="header" />
       <img src={linkedin} alt="header" />
       <img src={github} alt="header" />
 
-    </div>
+    </div> -->
   </div>
   <div class="column">
     <!-- Content for second column -->
