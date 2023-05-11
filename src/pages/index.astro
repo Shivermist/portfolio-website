@@ -24,13 +24,13 @@ import Footer from "../components/Footer.astro";
     <h1 style="padding-top: 3.4em;">Integrated Cornerstone Design Projects</h1>
     <ul role="list" class="link-card-grid">
       <Card
-        href="https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a"
+        href="https://cgkim.notion.site/Summary-of-Experience-d84f2f4c7b344e1f8492cdae1a045bd1"
         title="Renewable Energy Challenge"
         body="..."
         imageSrc="windmill.jpg"
       />
       <Card
-        href="https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a"
+        href="https://cgkim.notion.site/Summary-of-Experience-807cb5d6c3b14bee8afb4015416727ce"
         title="Get A Grip"
         body="..."
         imageSrc="QLabs-Robotics-Sorting.png"
@@ -38,13 +38,13 @@ import Footer from "../components/Footer.astro";
     </ul>
     <ul role="list" class="link-card-grid">
       <Card
-        href="https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a"
+        href="https://www.notion.so/cgkim/Summary-of-Experience-3-80d444d4965748869a877591cce5c0b1?pvs=4"
         title="Revenge of the Recycling System"
         body="..."
         imageSrc="QArm-Virtual-Sorting.jpg"
       />
       <Card
-        href="https://cgkim.notion.site/Claire-Kim-6b38e1f739f54e139733775a8746f40a"
+        href="https://cgkim.notion.site/Summary-of-Experience-4-a26d9cbbb533406f9534febe9c427d31"
         title="Electromagnetic Gripper"
         body="..."
         imageSrc="electromagnetic_gripper.jpg"
@@ -76,18 +76,11 @@ import Footer from "../components/Footer.astro";
     max-width: 120ch;
   }
   h1 {
-    font-size: 2.5em;
+    font-size: clamp(0.5em, 4vw, 2.7em);
     font-weight: 800;
     margin: 0;
     text-align: left;
     color: rgb(70, 70, 70);
-  }
-
-  h2 {
-    font-size: 2em;
-    font-weight: 500;
-    margin: 0;
-    text-align: left;
   }
 
   .text-gradient {
@@ -97,30 +90,25 @@ import Footer from "../components/Footer.astro";
     background-size: 400%;
     background-position: 0%;
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1em 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1em;
-    border-radius: 0.4em;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
+
   .link-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1em;
     padding: 0;
   }
+
+  @media screen and (max-width: 700px) {
+  .link-card-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+  }
+  .column {
+    grid-row: auto;
+  }
+
+}
+
 
 </style>

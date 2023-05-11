@@ -1,6 +1,4 @@
 ---
-import { Image, getImage } from "astro:assets";
-
 export interface Props {
   name: string;
   job: string;
@@ -11,6 +9,10 @@ export interface Props {
 const { name, job, desc, image } = Astro.props;
 
 import "../styles/Header.css";
+import email from "../Logos/email.svg";
+import linkedin from "../Logos/linkedin.svg";
+import github from "../Logos/github.svg";
+
 ---
 
 <div class="grid">
@@ -19,10 +21,16 @@ import "../styles/Header.css";
     <h1>Hi I'm <span class="text-gradient"> {name}</span></h1>
     <h2>{job}</h2>
     <p>{desc}</p>
-    <br />
+    <br/>
     <a href="resume.pdf" target="_blank">
       <button class="button">Resume</button>
     </a>
+    <div class="container">
+      <img src={email} alt="header" />
+      <img src={linkedin} alt="header" />
+      <img src={github} alt="header" />
+
+    </div>
   </div>
   <div class="column">
     <!-- Content for second column -->

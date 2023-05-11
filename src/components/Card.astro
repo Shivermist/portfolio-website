@@ -30,7 +30,6 @@ const { href, title, body, imageSrc } = Astro.props;
     background-size: 100%;
     border-radius: 0.6em;
     background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -2px rgba(0, 0, 0, 0.1);
   }
@@ -51,14 +50,10 @@ const { href, title, body, imageSrc } = Astro.props;
     transform: translateY(-0.5em);
   }
 
-  .link-card:hover .image-container,
-  .link-card:focus-within .image-container {
-    transform: scale(1.2);
-  }
-
   .link-card > a > h2 {
     margin: 0.5em;
-    font-size: 1.5em;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
     text-align: center;
   }
 
@@ -66,4 +61,12 @@ const { href, title, body, imageSrc } = Astro.props;
     margin: 0.5em;
     color: #444;
   }
+
+  @media screen and (max-width: 700px) {
+    .link-card {
+      background-size: small;
+    }
+}
+
+
 </style>

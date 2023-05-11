@@ -1,11 +1,9 @@
 ---
-import { Image, getImage } from "astro:assets";
-
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+
+import "../styles/about.css"
 ---
 
 <Layout title="About">
@@ -18,16 +16,18 @@ import Footer from "../components/Footer.astro";
       <div class="column">
         <h1 class="text-gradient">About Me</h1>
         <p class="instructions">
-          Hello, I'm Claire (Gyu-Ri) Kim. Welcome to my website! <br />
-          <br />
+          Hello, I'm <strong>Claire (Gyu-Ri) Kim.</strong> Welcome to my website! <br/>
+          <br/>
 
           I'm currently studying computer engineering at McMaster University
-          where I studied various topics in data structure and algorithms,
-          circuit design, and computer architecture. <br />
-          <br />
+          where I went learned topics in data structure and algorithms,
+          circuit design, and computer architecture. <br/>
+          <br/>
 
-          Currently, I am interested in embedded systems, robotics, and machine
-          learning. As well as arts and design. <br />
+          Currently, my interests include robotics, embedded systems, and machine
+          learning. On the side, I also love doing various arts and design, mainly focusing on digital works. <br/>
+
+          
           <br />
         </p>
       </div>
@@ -37,71 +37,4 @@ import Footer from "../components/Footer.astro";
   <Footer />
 </Layout>
 
-<style>
-  body {
-    background-color: white;
-  }
 
-  main {
-    margin: auto;
-    padding: 1.5em;
-    max-width: 70em;
-  }
-  h1 {
-    font-size: 2.5em;
-    font-weight: 800;
-    margin: 0;
-    color: rgb(0, 0, 0);
-    text-align: center;
-  }
-
-  p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.4em;
-    margin: 0;
-    padding-top: 3em;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .column {
-    text-align: left;
-    margin-left: 5em;
-  }
-
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1em 0;
-    border: 0.3em solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1em;
-    border-radius: 0.4em;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 0.4em;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-</style>

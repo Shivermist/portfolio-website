@@ -6,7 +6,7 @@
 .column {
   /* how to do top padding */
   text-align-last: center;
-  margin-left: 5em;
+  margin-left: 6em;
   text-align: center;
   font-size: 1vw;
 }
@@ -63,6 +63,20 @@ img {
   cursor: pointer;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.container img {
+  width: 7%;
+  height: auto;
+  padding-top: 2em;
+  padding-left: 2em;
+}
+
 @media screen and (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
@@ -71,7 +85,9 @@ img {
   .column {
     grid-row: auto;
     font-size: 2vw;
+    margin-left: 2em;
   }
+  
   .button {
     font-size: 3.5vw;
   }

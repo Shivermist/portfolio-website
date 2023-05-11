@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-  <path fill="#000" d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"/>
-  <path fill="url(#gradient)" d="M18 28a7.63 7.63 0 0 1-5-2c-1.4 2.1-.35 4.35.6 5.55.14.17.41.07.47-.15.44-1.8 2.93-1.22 2.93.6 0 2.28.87 3.4 1.72 3.81.34.16.59-.2.49-.56-.31-1.05-.29-2.46 1.29-3.25 3-1.5 3.17-4.83 2.5-6-.67.67-2.6 2-5 2Z"/>
-  <defs>
-    <linearGradient id="gradient" x1="16" x2="16" y1="32" y2="24" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg fill="#9042e5" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 212.00 212.00" xml:space="preserve" stroke="#aa65d7" stroke-width="0.00212" transform="rotate(45)">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M0,128.023v21h31.501V180.5h31.476V212h21v-31.5H95.5V212h21v-31.5h11.523V212h21v-31.5h31.476v-31.477H212v-21h-31.501 V116.5H212v-21h-31.501V83.977H212v-21h-31.501V31.5h-31.476V0h-21v31.5H116.5V0h-21v31.5H83.977V0h-21v31.5H31.501v31.477H0v21 h31.501V95.5H0v21h31.501v11.523H0z M66.475,66.475h79.051v79.051H66.475V66.475z"/> </g>
+
 </svg>

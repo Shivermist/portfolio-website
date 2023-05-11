@@ -1,0 +1,81 @@
+
+
+body {
+    background-color: white;
+  }
+
+  main {
+    margin: auto;
+    padding: 1.5em;
+    max-width: 70em;
+  }
+  h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  p {
+    font-size: clamp(0.6em, 1.4vw, 1em);
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 0.4em;
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .column {
+    text-align: center;
+    margin-left: 2em;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1em 0;
+    border: 0.3em solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.4em;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 0.4em;
+    padding: 0.3em 0.45em;
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .column {
+      margin-left: 0;
+      padding-top: 1em;
+    }
+    .column img {
+      width: 60%;
+    }
+    .instructions {
+      margin: 1em 0;   
+      font-size: 0.9em; 
+    }
+  }
